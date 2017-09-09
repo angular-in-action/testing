@@ -17,20 +17,4 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 })
 export class SummaryComponent {
   @Input() stock: any;
-
-  isNegative() {
-    if (!this.stock || this.stock.change >= 0) {
-      return false;
-    }
-
-    return true;
-  }
-
-  isPositive() {
-    if (!this.stock || this.stock.change <= 0) {
-      return false;
-    }
-
-    return true;
-  }
 }
