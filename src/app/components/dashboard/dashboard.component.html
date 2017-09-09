@@ -2,7 +2,7 @@
   <div class="mdl-cell mdl-cell--12-col" *ngIf="!stocks" style="text-align: center;">
     Loading
   </div>
-  <div class="mdl-cell mdl-cell--3-col" *ngFor="let stock of stocks">
-    <summary [stock]="stock" cardHover></summary>
+  <div class="mdl-cell mdl-cell--3-col" *ngFor="let stock of stocks; index as i">
+    <summary [stock]="stock" *delay="i * 100" cardHover></summary>
   </div>
 </div>
