@@ -15,6 +15,7 @@ import { AppRoutes } from './app.routes';
 import { CardTypeDirective } from './directives/card-type.directive';
 import { CardHoverDirective } from './directives/card-hover.directive';
 import { DelayDirective } from './directives/delay.directive';
+import { ChangePipe } from './pipes/change.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { DelayDirective } from './directives/delay.directive';
     ManageComponent,
     CardTypeDirective,
     CardHoverDirective,
-    DelayDirective
+    DelayDirective,
+    ChangePipe
   ],
   imports: [
     BrowserModule,
