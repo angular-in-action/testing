@@ -16,6 +16,7 @@ import { CardTypeDirective } from './directives/card-type.directive';
 import { CardHoverDirective } from './directives/card-hover.directive';
 import { DelayDirective } from './directives/delay.directive';
 import { ChangePipe } from './pipes/change.pipe';
+import { ChangeDetectorPipe } from './pipes/change-detector.pipe';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ChangePipe } from './pipes/change.pipe';
     CardTypeDirective,
     CardHoverDirective,
     DelayDirective,
-    ChangePipe
+    ChangePipe,
+    ChangeDetectorPipe
   ],
   imports: [
     BrowserModule,
