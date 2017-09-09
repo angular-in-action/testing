@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { CurrencyPipe, PercentPipe } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { StocksService } from './services/stocks.service';
@@ -21,10 +24,13 @@ import { AppRoutes } from './app.routes';
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    BrowserAnimationsModule,
     AppRoutes
   ],
   providers: [
-    StocksService
+    StocksService, 
+    CurrencyPipe, 
+    PercentPipe
   ],
   bootstrap: [AppComponent]
 })

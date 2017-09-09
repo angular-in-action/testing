@@ -11,6 +11,11 @@ export interface StockInterface {
   changeInPercent: number;
 }
 
+export interface NewsInterface {
+  url: string;
+  title: string;
+}
+
 @Injectable()
 export class StocksService {
 
@@ -35,4 +40,7 @@ export class StocksService {
       return this.http.get<Array<StockInterface>>(service + '/stocks/snapshot?symbols=' + symbols.join());
     }
   }
+  getNewsSnapshot(source = 'the-wall-street-journal') {
+    return this.http.get<NewsInterface>(service + '/stocks/news/snapshot?source=' + source);
+  }  
 }
