@@ -9,7 +9,7 @@ export class ChangeDetectorPipe implements PipeTransform {
 
   transform(value: any, args?: any): any {
     this.count++;
-    console.log(`Component change detection executed ${this.count} times`);
+    // console.log(`Component change detection executed ${this.count} times`);
     return value;
   }
 }
